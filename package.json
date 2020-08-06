@@ -1,0 +1,60 @@
+{
+  "name": "my-toolset",
+  "displayName": "my-toolset",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:my-toolset.revealFileInCode",
+    "onCommand:my-toolset.revealFileInOS"
+  ],
+  "main": "./extension.js",
+  "publisher": "over58",
+  "contributes": {
+    "commands": [
+      {
+        "command": "my-toolset.revealFileInCode",
+        "title": "新窗口中vscode打开当前文件夹"
+      },
+      {
+        "command": "my-toolset.revealFileInOS",
+        "title": "在文件资源管理器中显示"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorFocus",
+          "command": "my-toolset.revealFileInCode",
+          "group": "navigation"
+        },
+        {
+          "when": "editorFocus",
+          "command": "my-toolset.revealFileInOS",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.43.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  }
+}
