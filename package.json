@@ -11,7 +11,8 @@
   ],
   "activationEvents": [
     "onCommand:my-toolset.revealFileInCode",
-    "onCommand:my-toolset.revealFileInOS"
+    "onCommand:my-toolset.revealFileInOS",
+    "onCommand:my-toolset.createComponent"
   ],
   "main": "./extension.js",
   "publisher": "over58",
@@ -24,6 +25,10 @@
       {
         "command": "my-toolset.revealFileInOS",
         "title": "在文件资源管理器中显示"
+      },
+      {
+        "command": "my-toolset.createComponent",
+        "title": "创建vue组件"
       }
     ],
     "menus": {
@@ -36,6 +41,18 @@
         {
           "when": "editorFocus",
           "command": "my-toolset.revealFileInOS",
+          "group": "navigation"
+        },
+        {
+          "when": "editorFocus",
+          "command": "my-toolset.createComponent",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "hover",
+          "command": "my-toolset.createComponent",
           "group": "navigation"
         }
       ]
