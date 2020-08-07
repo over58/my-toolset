@@ -36,30 +36,31 @@
         {
           "when": "editorFocus",
           "command": "my-toolset.revealFileInCode",
-          "group": "navigation"
+          "group": "_modification"
         },
         {
           "when": "editorFocus",
           "command": "my-toolset.revealFileInOS",
-          "group": "navigation"
+          "group": "_modification"
         },
         {
           "when": "editorFocus",
           "command": "my-toolset.createComponent",
-          "group": "navigation"
+          "group": "_modification"
         }
       ],
+      
       "explorer/context": [
         {
-          "when": "hover",
           "command": "my-toolset.createComponent",
-          "group": "navigation"
+          "group": "_modification",
+          "icon": "media/paw-outline.svg"
         }
       ]
     }
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint .  --fix",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js",
     "pack": "vsce package"

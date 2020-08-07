@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="less scoped>
+<style lang="less scoped">
 .${name.toLowerCase()}-wrapper{
 }
 </style>`;

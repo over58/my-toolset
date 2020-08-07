@@ -1,7 +1,7 @@
 const  vscode = require('vscode')
-const path = require('path')
+// const path = require('path')
 
-function provideHover (document, position, token) {
+function provideHover (document, position) {
   // const fileName    = document.fileName;
   // const workDir     = path.dirname(fileName);
   const word        = document.getText(document.getWordRangeAtPosition(position));
