@@ -10,9 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:my-toolset.revealFileInCode",
-    "onCommand:my-toolset.revealFileInOS",
-    "onCommand:my-toolset.createComponent"
+    "*"
   ],
   "main": "./extension.js",
   "publisher": "over58",
@@ -24,7 +22,11 @@
       },
       {
         "command": "my-toolset.revealFileInOS",
-        "title": "在文件资源管理器中显示"
+        "title": "在文件资源管理器中显示",
+        "icon": {
+          "dark": "./media/open-dark.svg",
+          "light": "./media/open-light.svg"
+        }
       },
       {
         "command": "my-toolset.createComponent",
@@ -47,6 +49,13 @@
           "when": "editorFocus",
           "command": "my-toolset.createComponent",
           "group": "_modification"
+        }
+      ],
+      "editor/title": [
+        {
+          "when": "editorFocus",
+          "command": "my-toolset.revealFileInOS",
+          "group": "navigation"
         }
       ],
       
