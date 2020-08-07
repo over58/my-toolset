@@ -1,6 +1,6 @@
 {
-  "name": "my-toolset",
-  "displayName": "my-toolset",
+  "name": "toolset",
+  "displayName": "toolset",
   "description": "",
   "version": "0.0.2",
   "engines": {
@@ -12,16 +12,17 @@
   "activationEvents": [
     "*"
   ],
+  "icon": "media/toolset.png",
   "main": "./extension.js",
-  "publisher": "over58",
+  "publisher": "2658553345",
   "contributes": {
     "commands": [
       {
-        "command": "my-toolset.revealFileInCode",
+        "command": "toolset.revealFileInCode",
         "title": "新窗口中vscode打开当前文件夹"
       },
       {
-        "command": "my-toolset.revealFileInOS",
+        "command": "toolset.revealFileInOS",
         "title": "在文件资源管理器中显示",
         "icon": {
           "dark": "./media/open-dark.svg",
@@ -29,39 +30,57 @@
         }
       },
       {
-        "command": "my-toolset.createComponent",
+        "command": "toolset.createComponent",
         "title": "创建vue组件"
+      },
+      {
+        "command": "toolset.log",
+        "title": "打印当前选中命令"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "toolset.log",
+        "when": "editorFocus",
+        "win": "ctrl+shift+l",
+        "linux": "ctrl+shift+l",
+        "mac": "command+shift+l"
       }
     ],
     "menus": {
       "editor/context": [
         {
           "when": "editorFocus",
-          "command": "my-toolset.revealFileInCode",
+          "command": "toolset.revealFileInCode",
           "group": "_modification"
         },
         {
           "when": "editorFocus",
-          "command": "my-toolset.revealFileInOS",
+          "command": "toolset.revealFileInOS",
           "group": "_modification"
         },
         {
           "when": "editorFocus",
-          "command": "my-toolset.createComponent",
+          "command": "toolset.createComponent",
+          "group": "_modification"
+        },
+        {
+          "when": "editorFocus",
+          "command": "toolset.log",
           "group": "_modification"
         }
       ],
       "editor/title": [
         {
           "when": "editorFocus",
-          "command": "my-toolset.revealFileInOS",
+          "command": "toolset.revealFileInOS",
           "group": "navigation"
         }
       ],
       
       "explorer/context": [
         {
-          "command": "my-toolset.createComponent",
+          "command": "toolset.createComponent",
           "group": "_modification",
           "icon": "media/paw-outline.svg"
         }

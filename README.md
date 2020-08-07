@@ -2,17 +2,23 @@
 
 为了更加方便的使用vscode, 新增了一些快捷命令
 
-## 右键菜单上添加新的指令
-[新增右键菜单](/media/{E9588354-ECA7-4B94-A397-8A8735A0A36C}_20200807140139.jpg)
-
-## 鼠标放在时间戳上自动格式化显示
-[hover](/media/{EA8CD14E-17B3-4284-A743-F458FFB5D470}_20200807140601.jpg)
 
 ## Features
 
 - 在文件资源管理中打开当前文件夹(右键菜单)
 - 在vscode中以新窗口的形式打开当前文件夹(右键菜单)
 - 鼠标放在时间戳上自动格式化显示（hover）
-  
-## Download
-[插件最新版本]('./../my-toolset-0.0.1.vsix)
+- 选中变量快速的console.log，添加快捷键
+
+### 选中变量快速的console.log，添加快捷键
+```
+"win": "ctrl+shift+l",
+"linux": "ctrl+shift+l",
+"mac": "command+shift+l"
+```
+vscode的配置文件中可以添加配置,指定标识符**identifier**,如下：
+```
+"toolset": {
+  "identifier": "="
+}
+```

@@ -8,6 +8,7 @@ function activate(context) {
   require('./commands/time')(context)
   require('./commands/open')(context)
   require('./commands/new-component')(context)
+  require('./commands/log')(context)
 }
 exports.activate = activate;
 

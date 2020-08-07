@@ -63,7 +63,7 @@ export default {
 }
 
 module.exports = function addCommand(context) {
-  let disposable = vscode.commands.registerCommand('my-toolset.createComponent', async function () {
+  let disposable = vscode.commands.registerCommand('toolset.createComponent', async function () {
     let fileDir = path.dirname(vscode.window.activeTextEditor.document.fileName)
     console.log(fileDir)
     await createComponent(fileDir)
