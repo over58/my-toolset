@@ -11,6 +11,14 @@
 - 选中变量快速的console.log，添加快捷键
 - 支持 cson 和 json 格式的互相转换，用来方便的添加自定义语法
 
+## 所有支持的自定义配置
+```
+"toolset": {
+  "identifier": "=",
+  "revealFileInOS": false (default)
+}
+```
+
 ### 选中变量快速的console.log，添加快捷键
 ```
 "win": "ctrl+shift+l",
@@ -20,6 +28,7 @@
 vscode的配置文件中可以添加配置,指定标识符**identifier**,如下：
 ```
 "toolset": {
-  "identifier": "="
+  "identifier": "=",
+  "revealFileInOS": false (default)
 }
 ```
