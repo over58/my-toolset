@@ -28,10 +28,6 @@
         "description":"convert json to cson"
       },
       {
-        "command": "toolset.revealFileInCode",
-        "title": "新窗口中vscode打开当前文件夹"
-      },
-      {
         "command": "toolset.revealFileInOS",
         "title": "在文件资源管理器中显示",
         "icon": {
@@ -59,11 +55,6 @@
     ],
     "menus": {
       "editor/context": [
-        {
-          "when": "editorFocus",
-          "command": "toolset.revealFileInCode",
-          "group": "_modification"
-        },
         {
           "when": "editorFocus",
           "command": "toolset.revealFileInOS",
