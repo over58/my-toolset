@@ -7,11 +7,13 @@ function provideHover (document, position) {
   const word        = document.getText(document.getWordRangeAtPosition(position));
 
   let time
-  if(/\d{13}/.test(word)) {
+  if(/^\d{13}$/.test(word)) {
     time = word
-  }else if(/\d{10}/.test(word)) {
-    time = word*1000
+  }else if(/^\d{10}$/.test(word)) {
+    console.log(10)
   }
+
+  console.log('执行...')
 
   if(time) {
     try {

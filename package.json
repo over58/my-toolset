@@ -2,7 +2,7 @@
   "name": "toolset",
   "displayName": "toolset",
   "description": "",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.43.0"
   },
@@ -17,6 +17,16 @@
   "publisher": "2658553345",
   "contributes": {
     "commands": [
+      {
+        "command": "toolset.cson2json",
+        "title": "cson2json",
+        "description": "convert cson to json"
+      },
+      {
+        "command":"toolset.json2cson",
+        "title":"json2cson",
+        "description":"convert json to cson"
+      },
       {
         "command": "toolset.revealFileInCode",
         "title": "新窗口中vscode打开当前文件夹"
@@ -77,7 +87,6 @@
           "group": "navigation"
         }
       ],
-      
       "explorer/context": [
         {
           "command": "toolset.createComponent",
@@ -107,5 +116,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:over58/my-toolset.git"
+  },
+  "dependencies": {
+    "cson": "^7.19.0"
   }
 }

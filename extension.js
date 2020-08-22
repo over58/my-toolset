@@ -9,6 +9,7 @@ function activate(context) {
   require('./commands/open')(context)
   require('./commands/new-component')(context)
   require('./commands/log')(context)
+  require('./commands/cson')(context)
 }
 exports.activate = activate;
 
