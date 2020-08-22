@@ -13,8 +13,6 @@ function provideHover (document, position) {
     console.log(10)
   }
 
-  console.log('执行...')
-
   if(time) {
     try {
       let dateObj = new Date(+time)
