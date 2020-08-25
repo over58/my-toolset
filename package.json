@@ -2,7 +2,7 @@
   "name": "toolset",
   "displayName": "toolset",
   "description": "",
-  "version": "0.0.5",
+  "version": "0.0.9",
   "engines": {
     "vscode": "^1.43.0"
   },
@@ -23,9 +23,9 @@
         "description": "convert cson to json"
       },
       {
-        "command":"toolset.json2cson",
-        "title":"json2cson",
-        "description":"convert json to cson"
+        "command": "toolset.json2cson",
+        "title": "json2cson",
+        "description": "convert json to cson"
       },
       {
         "command": "toolset.revealFileInOS",
@@ -91,16 +91,18 @@
     "lint": "eslint .  --fix",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js",
-    "pack": "vsce package"
+    "pack": "rm -rf out/* && node utils/version.js && vsce package -o out/"
   },
   "devDependencies": {
-    "@types/vscode": "^1.43.0",
     "@types/glob": "^7.1.1",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.11.0",
+    "@types/vscode": "^1.43.0",
     "eslint": "^6.8.0",
+    "fs-extra": "^9.0.1",
     "glob": "^7.1.6",
     "mocha": "^7.1.2",
+    "semver": "^7.3.2",
     "typescript": "^3.8.3",
     "vscode-test": "^1.3.0"
   },

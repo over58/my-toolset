@@ -1,5 +1,4 @@
 node_modules
 .vscode-test/
 commands/dist/**
-dist/extension.dev.js
-dist
+dist/
