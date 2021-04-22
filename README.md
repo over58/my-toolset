@@ -1,6 +1,5 @@
 # my-toolset
-
-为了更加方便的使用vscode, 新增了一些快捷命令，具体如下
+这是一个vscode插件，主要提供了已下功能
 
 
 ## Features
